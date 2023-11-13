@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root {
+    --color-base-white: #ffffff;
+    --color-base-gray-100: #f5f5f5;
+    --color-base-gray-300: #3D3D3D;
+    --color-base-gray-500: #323238;
+    --color-base-gray-900: #1f1f23;
+}
+html, body, input {
+    font-family: "Mulish", sans-serif;
+}
+body {
+    font-size: 16px;
+    background-color: var(--color-base-white);
+    color: var(--color-base-gray-900);
+}
+#page {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: max-content 1fr max-content;
+}
+.container {
+    padding: 16px 32px;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+}
+main {
+    background-color: var(--color-base-gray-100);
+}
+header, nav, nav ul {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    font-weight: 700;
+}
+form {
+    flex: 1;
+}
+nav ul {
+    list-style: none;
+    font-size: 18px;
+    color: var(--color-base-gray-300);
+}
+ul li.active {
+    color: var(--color-base-gray-900);
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper label{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+.input-wrapper input {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-base-gray-100);
+    border: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main h1 {
+    padding-top: 16px;
+    font-size: 24px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 32px;
+    gap: 22px;
+}
+.item {
+    background-color: var(--color-base-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.details {
+    padding: 22px;
+    background-color: var(--color-base-white);
+    position: relative;
+    z-index: 1;
+}
+.details h2 {
+    font-size: 22px;
+}
+.tags {
+    margin-top: 22px;
+}
+.tags span {
+    padding: 6px;
+    background-color: var(--color-base-gray-100);
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+footer {
+    text-align: center;
+    padding: 16px;
+    font-weight: 600;
+}
+
+
